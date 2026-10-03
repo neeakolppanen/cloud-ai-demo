@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Väistä pallot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Väistä pallot</h1>
+
+        <div class="game-wrapper">
+            <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+            <!-- Start Screen Overlay -->
+            <div id="startScreen" class="overlay">
+                <h2>Tervetuloa peliin!</h2>
+                <p class="instructions">Paina nuolinäppäimiä liikkuaksesi</p>
+                <button id="startButton" class="btn">Aloita peli</button>
+            </div>
+
+            <!-- Game Over Overlay -->
+            <div id="gameOverScreen" class="overlay hidden">
+                <h2>Peli päättyi!</h2>
+                <p class="final-score">Pisteet: <span id="finalScoreText">0</span></p>
+                <button id="restartButton" class="btn">Pelaa uudelleen</button>
+            </div>
+        </div>
+
+        <div class="game-info">
+            <div class="score-board">
+                <span>Pisteet: </span><span id="scoreText">0</span>
+            </div>
+            <p class="controls-hint">Paina nuolinäppäimiä liikkuaksesi</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
